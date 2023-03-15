@@ -32,6 +32,14 @@ class AppPref{
     return _prefs.getBool('isDarkMode')??false;
   }
 
+  int get widthScreen {
+    return _prefs.getInt('widthScreen')??0;
+  }
+
+  int get heightScreen {
+    return _prefs.getInt('heightScreen')??0;
+  }
+
   // SETTER
 
   set url(String value){
@@ -49,4 +57,13 @@ class AppPref{
   set isDarkMode(bool value){
     _prefs.setBool('isDarkMode', value);
   }
+
+  set widthScreen(int value){
+    _prefs.setInt('widthScreen', value);
+  }
+
+  set heightScreen(int value){
+    _prefs.setInt('heightScreen', value);
+  }
+
 }

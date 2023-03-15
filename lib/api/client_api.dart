@@ -73,6 +73,10 @@ class ApiClient{
       typeRequest: GET,
       url: '$url/',
     );
+    if(response.status){
+      pref.widthScreen = response.data['width'];
+      pref.heightScreen = response.data['height'];
+    }
     return response;
   }
 
